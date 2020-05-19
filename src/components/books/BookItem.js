@@ -1,21 +1,23 @@
-import React from 'react'
+import React from "react";
 
-const Book = ({book}) => {
+const Book = ({ books }) => {
+  console.log({ books });
+
   // const {
   //   items,
   //   kind,
-  //   title,
+  //   volumeInfo,
   //   publishedDate,
   //   desxription,
   //   imageLinks,
   //   previewLink,
-  // } = book;
-  
+  // } = books;
+
   return (
     <div>
-      <p>{book.title}</p>
+      <p>{books.title}</p>
     </div>
-  )
-}
+  );
+};
 
 export default Book;

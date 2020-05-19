@@ -1,0 +1,10 @@
+.grid-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: 'Nova Round', cursive;
+}
+
+.book-title {
+    font-size: 25px;
+    font-weight: bolder;
+}

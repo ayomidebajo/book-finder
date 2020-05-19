@@ -1,0 +1,26 @@
+.header--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  width: 1200px;
+}
+
+.text--container {
+  padding-top: 100px;
+  width: 600px;
+}
+
+.header--body {
+  font-family: 'Nova Round', cursive;
+}
+
+.image-aside {
+  background: url('../img/another-book-aside.png') no-repeat;
+  height: 600px;
+  width: 700px;
+}
+
+
+.h1-text {
+  font-family: 'Fascinate Inline', cursive;
+}

@@ -1,0 +1,29 @@
+.navbar--container {
+  height: 6vh;
+  background: white;
+  border-bottom: 1px solid #9370db;
+  
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    width: 1240px;
+    margin: 10px auto;
+
+    & li:nth-child(2) {
+      margin-left: auto;
+    }
+  }
+}
+
+.logo {
+  text-decoration: none;
+  text-align: left;
+  font-family: 'Fascinate Inline', cursive;
+ 
+}
+
+.link {
+  padding: 0 20px 0 20px;
+  text-decoration: none;
+}

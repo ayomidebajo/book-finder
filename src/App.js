@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./styles/layout.scss";
+import Index from "./components/index";
+import axios from "axios";
+import Books from "./components/books/Books";
 
-function App() {
+const App = () => {
+  const [bookres, setBookRes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const searchRecipes = async (text) => {
+    const res = await axios.get(
+      `https://www.googleapis.com/books/v1/volumes?q=${text}&key=AIzaSyDzwEFeGG7CiCanj7Fv1iz54Gt4iUstd10`
+    );
+    console.log(res);
+    setBookRes(res.data);
+    setLoading(false)
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Index searchRecipes={searchRecipes} />
+      <Books books={bookres} loading={loading}/>
     </div>
   );
-}
+};
 
 export default App;

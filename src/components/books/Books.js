@@ -33,10 +33,6 @@ const Books = ({ books, loading }) => {
   }
 };
 
-// const clickHandler = (e) => {
-//   console.log("clicked");
 
-//   console.log(e.target.text);
-// };
 
 export default Books;

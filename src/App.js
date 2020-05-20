@@ -11,7 +11,7 @@ const App = () => {
 
   const apiKey = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
-  let ClientId;
+  let clientId;
 
   if (process.env.NODE_ENV !== "production") {
     clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;

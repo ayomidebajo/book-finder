@@ -1,29 +1,30 @@
 .navbar--container {
-  height: 6vh;
-  background: white;
-  border-bottom: 1px solid #9370db;
-  
+    height: 6vh;
+    background: white;
+    border-bottom: 2px solid #7b268a;
+    color: #7b268a;
 
-  .nav-links {
-    display: flex;
-    list-style: none;
-    width: 1240px;
-    margin: 10px auto;
 
-    & li:nth-child(2) {
-      margin-left: auto;
+    .nav-links {
+        display: flex;
+        list-style: none;
+        width: 1240px;
+        margin: 10px auto;
+
+        & li:nth-child(2) {
+            margin-left: auto;
+        }
     }
-  }
 }
 
 .logo {
-  text-decoration: none;
-  text-align: left;
-  font-family: 'Fascinate Inline', cursive;
- 
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Fascinate Inline', cursive;
+    color: #7b268a;
 }
 
 .link {
-  padding: 0 20px 0 20px;
-  text-decoration: none;
+    padding: 0 20px;
+    text-decoration: none;
 }

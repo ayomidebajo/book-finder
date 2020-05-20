@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 // import PropTypes from 'prop-types'
 
-const Header = ({ searchRecipes }) => {
+const Header = ({ searchBooks, loading }) => {
   const [text, setText] = useState("");
 
-  const clickHandler = (e) => {
-    searchRecipes(text);
-    setText("");
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (text === "") {
+      return null;
+      // setLoading(false);
+    } else {
+      searchBooks(text);
+      setText("");
+    }
   };
 
   const onChange = (e) => {
@@ -27,14 +33,14 @@ const Header = ({ searchRecipes }) => {
         <div className="input-field">
           <input
             type="text"
-            placeholder="Find a book"
+            placeholder="Find a book by it's title or author"
             value={text}
             onChange={onChange}
+            className="input"
           />
-          <button type="submit" onClick={clickHandler}>
-            Submit
+          <button className="btn" type="submit" onClick={submitHandler}>
+            <i className="fas fa-arrow-right"></i>
           </button>
-          <p>{text}</p>
         </div>
       </div>
       <div className="header-image__container">

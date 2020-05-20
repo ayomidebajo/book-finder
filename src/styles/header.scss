@@ -1,26 +1,64 @@
 .header--container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: auto;
-  width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    width: 1200px;
 }
 
 .text--container {
-  padding-top: 100px;
-  width: 600px;
+    padding-top: 100px;
+    width: 600px;
 }
 
 .header--body {
-  font-family: 'Nova Round', cursive;
+    font-family: 'Nova Round', cursive;
 }
 
 .image-aside {
-  background: url('../img/another-book-aside.png') no-repeat;
-  height: 600px;
-  width: 700px;
+    background: url('../img/another-book-aside.png') no-repeat;
+    height: 600px;
+    width: 700px;
+}
+
+.h1-text {
+    font-family: 'Fascinate Inline', cursive;
+}
+
+.input {
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border: 2px solid sandybrown;
+    margin-right: 4px;
+    &:hover {
+        border: 2px solid #421C52;
+    }
+}
+
+.fas {
+    font-size: 20px;
 }
 
 
-.h1-text {
-  font-family: 'Fascinate Inline', cursive;
+.btn {
+    height: 36px;
+    width: 100px;
+    background: sandybrown;
+    color: #421C52;
+    border: 1px solid sandybrown;
+    border-radius: 5px;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #421C52;
+        color: sandybrown;
+        outline: none;
+    }
+}
+
+.input-field {
+    height: 35px;
+    display: flex;
+    align-items: center;
 }

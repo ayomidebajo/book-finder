@@ -9,21 +9,23 @@ const Books = ({ books, loading }) => {
       <div className="grid-container">
         {Object.keys(books).map((item, i) => (
           <ul key={i} className="grid-list">
-            <li className="card-item">
-              <p className="book-title">{books[item].volumeInfo.title}</p>
-              <div className="sub-container">
-                <img
-                  src={books[item].volumeInfo.imageLinks.smallThumbnail}
-                  alt="book"
-                  width="105px"
-                />
-                <p>Date published: {books[item].volumeInfo.publishedDate}</p>
+            <li className="card-container">
+              <div className="card--item">
+                <p className="book-title">{books[item].volumeInfo.title}</p>
+                <div className="sub-container">
+                  <img
+                    src={books[item].volumeInfo.imageLinks.smallThumbnail}
+                    alt="book"
+                    width="105px"
+                  />
+                  <p>Date published: {books[item].volumeInfo.publishedDate}</p>
 
-                <p>Author: {books[item].volumeInfo.authors}</p>
+                  <p>Author: {books[item].volumeInfo.authors}</p>
 
-                <button className="btn-details" type="submit">
-                  View more details
-                </button>
+                  <button className="btn-details" type="submit">
+                    View more details
+                  </button>
+                </div>
               </div>
             </li>
           </ul>
@@ -32,7 +34,5 @@ const Books = ({ books, loading }) => {
     );
   }
 };
-
-
 
 export default Books;

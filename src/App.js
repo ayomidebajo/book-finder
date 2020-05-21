@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import "./styles/layout.scss";
 import Index from "./components/index";
 import axios from "axios";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App = () => {
-  const [bookres, setBookRes] = useState([]);
-  const [loading, setLoading] = useState(false);
 
-
- 
   let clientId;
 
   if (process.env.NODE_ENV !== "production") {
@@ -17,6 +13,13 @@ const App = () => {
   } else {
     clientId = process.env.GOOGLE_CLIENT_ID;
   }
+
+  const [bookres, setBookRes] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+
+ 
+  
 
   const searchBooks = async (text) => {
     setLoading(true);

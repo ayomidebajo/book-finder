@@ -5,21 +5,16 @@ import axios from "axios";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App = () => {
+  const clientId = "AIzaSyDzwEFeGG7CiCanj7Fv1iz54Gt4iUstd10";
 
-  let clientId;
-
-  if (process.env.NODE_ENV !== "production") {
-    clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
-  } else {
-    clientId = process.env.GOOGLE_CLIENT_ID;
-  }
+  // if (process.env.NODE_ENV !== "production") {
+  //   clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  // } else {
+  //   clientId = process.env.GOOGLE_CLIENT_ID;
+  // }
 
   const [bookres, setBookRes] = useState([]);
   const [loading, setLoading] = useState(false);
-
-
- 
-  
 
   const searchBooks = async (text) => {
     setLoading(true);

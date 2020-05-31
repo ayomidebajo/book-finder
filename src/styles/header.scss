@@ -1,13 +1,28 @@
+@import './mixins.scss';
+
 .header--container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
     width: 1200px;
+
+    @include for-phone-only {
+    grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .text--container {
     padding-top: 100px;
     width: 600px;
+
+    @include for-phone-only {
+        width: 350px;
+        margin: auto;
+        }
+   
 }
 
 .header--body {
@@ -18,6 +33,10 @@
     background: url('../img/another-book-aside.png') no-repeat;
     height: 600px;
     width: 700px;
+
+    @include for-phone-only {
+        display: none;
+    }
 }
 
 .h1-text {
@@ -62,3 +81,5 @@
     display: flex;
     align-items: center;
 }
+
+

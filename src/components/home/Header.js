@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 // import PropTypes from 'prop-types'
 
-const Header = ({ searchBooks, loading }) => {
+const Header = ({ searchBooks }) => {
   const [text, setText] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
     if (text === "") {
       return null;
-      // setLoading(false);
     } else {
       searchBooks(text);
       setText("");

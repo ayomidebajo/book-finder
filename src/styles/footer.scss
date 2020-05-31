@@ -1,0 +1,10 @@
+.footer--container {
+  padding-top: 100px;
+  margin: auto;
+  text-align: center;
+
+  @include for-phone-only {
+    margin: 0;
+    padding: 100px 0px;
+  }
+}

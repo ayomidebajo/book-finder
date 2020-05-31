@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./home/Header";
 import Navbar from "./layout/Navbar";
 import Books from "./books/Books";
+import Footer from './layout/Footer';
 
 const Index = ({ searchBooks, loading, books }) => {
   return (
@@ -9,6 +10,7 @@ const Index = ({ searchBooks, loading, books }) => {
       <Navbar />
       <Header searchBooks={searchBooks} loading={loading} />
       <Books books={books} loading={loading} />
+      <Footer />
     </div>
   );
 };
